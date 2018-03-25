@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'npm install --verbose' 
+                sh 'npm config set registry https://registry.npm.taobao.org && npm install --verbose' 
             }
         }
         stage('Test') {
